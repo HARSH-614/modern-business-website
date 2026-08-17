@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXORA — Digital Technology & Business Solutions</title>
+    <meta name="description" content="NEXORA is a fictional digital technology company providing modern web development, AI solutions, and business automation. (Portfolio Project)">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="NEXORA — Digital Technology & Business Solutions">
+    <meta property="og:description" content="Modern web development, AI solutions, and business automation.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Background Canvas -->
+    <canvas id="network-canvas" aria-hidden="true"></canvas>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container container">
+            <a href="#" class="brand-logo" aria-label="NEXORA Home">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>NEXORA</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#process" class="nav-link">Process</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <button id="mobile-toggle" class="mobile-toggle" aria-label="Open Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="container hero-content">
+                <div class="status-badge fade-in-up">
+                    <span class="status-dot"></span>
+                    <span>DIGITAL INNOVATION PARTNER</span>
+                </div>
+                <h1 class="hero-title fade-in-up delay-1">BUILD SMARTER.<br><span class="gradient-text">MOVE FURTHER.</span></h1>
+                <p class="hero-subtitle fade-in-up delay-2">We help visionary organizations transform complex ideas into modern digital products, scalable architectures, and intelligent solutions.</p>
+                <div class="hero-actions fade-in-up delay-3">
+                    <a href="#contact" class="btn btn-primary">Start a Project</a>
+                    <a href="#services" class="btn btn-secondary">Explore Solutions</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Bar -->
+        <div class="trust-bar fade-in-up delay-4">
+            <div class="container trust-container">
+                <span class="trust-label">INDUSTRIES SERVED (DEMO)</span>
+                <div class="trust-logos">
+                    <span>FINTECH</span>
+                    <span class="divider">•</span>
+                    <span>HEALTHCARE</span>
+                    <span class="divider">•</span>
+                    <span>EDUCATION</span>
+                    <span class="divider">•</span>
+                    <span>RETAIL</span>
+                    <span class="divider">•</span>
+                    <span>LOGISTICS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Why NEXORA?</h2>
+                    <p>Modern technology designed around real business objectives.</p>
+                </div>
+                <div class="value-grid">
+                    <div class="value-card glass-panel reveal">
+                        <div class="icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                        <h3>Innovation</h3>
+                        <p>Modern technology designed around real business needs, not just trends.</p>
+                    </div>
+                    <div class="value-card glass-panel reveal delay-1">
+                        <div class="icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+                        <h3>Scalability</h3>
+                        <p>Architectures built to grow effortlessly with your organization.</p>
+                    </div>
+                    <div class="value-card glass-panel reveal delay-2">
+                        <div class="icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+                        <h3>Intelligence</h3>
+                        <p>Data and automation workflows used to improve business decisions.</p>
+                    </div>
+                    <div class="value-card glass-panel reveal delay-3">
+                        <div class="icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+                        <h3>Reliability</h3>
+                        <p>Performance, security, and maintainability considered from day one.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section bg-alt" id="services">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Our Services</h2>
+                    <p>Comprehensive digital solutions for the modern enterprise.</p>
+                </div>
+                <div class="services-grid" id="services-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="section section-stats" id="stats">
+            <div class="container">
+                <p class="demo-label reveal">DEMO COMPANY METRICS</p>
+                <div class="stats-grid">
+                    <div class="stat-item reveal">
+                        <h3 class="counter" data-target="50">0</h3><span class="plus">+</span>
+                        <p>DIGITAL PROJECTS</p>
+                    </div>
+                    <div class="stat-item reveal delay-1">
+                        <h3 class="counter" data-target="12">0</h3><span class="plus">+</span>
+                        <p>INDUSTRIES</p>
+                    </div>
+                    <div class="stat-item reveal delay-2">
+                        <h3 class="counter" data-target="98">0</h3><span class="plus">%</span>
+                        <p>CLIENT SATISFACTION</p>
+                    </div>
+                    <div class="stat-item reveal delay-3">
+                        <h3>24/7</h3>
+                        <p>DIGITAL AVAILABILITY</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Work Section -->
+        <section class="section" id="work">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Featured Work</h2>
+                    <p>Case studies demonstrating our technical approach. (Fictional)</p>
+                </div>
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="section bg-alt" id="process">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Our Process</h2>
+                    <p>A systematic approach to digital transformation.</p>
+                </div>
+                <div class="process-timeline">
+                    <div class="process-step reveal">
+                        <div class="step-number">01</div>
+                        <h3>DISCOVER</h3>
+                        <p>Understand the business, users, and problem.</p>
+                    </div>
+                    <div class="process-step reveal delay-1">
+                        <div class="step-number">02</div>
+                        <h3>STRATEGIZE</h3>
+                        <p>Define the product and technical direction.</p>
+                    </div>
+                    <div class="process-step reveal delay-2">
+                        <div class="step-number">03</div>
+                        <h3>DESIGN</h3>
+                        <p>Create the user experience and visual system.</p>
+                    </div>
+                    <div class="process-step reveal delay-3">
+                        <div class="step-number">04</div>
+                        <h3>BUILD</h3>
+                        <p>Develop and integrate the scalable solution.</p>
+                    </div>
+                    <div class="process-step reveal delay-4">
+                        <div class="step-number">05</div>
+                        <h3>LAUNCH</h3>
+                        <p>Test, optimize, and deploy to production.</p>
+                    </div>
+                    <div class="process-step reveal delay-5">
+                        <div class="step-number">06</div>
+                        <h3>GROW</h3>
+                        <p>Iterate and improve based on real-world data.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Ecosystem -->
+        <section class="section" id="tech">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Technology Ecosystem</h2>
+                    <p>Modern stacks for modern problems.</p>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-card glass-panel reveal">
+                        <h3>Frontend</h3>
+                        <p>HTML5 • CSS3 • JavaScript • React • Vue</p>
+                    </div>
+                    <div class="tech-card glass-panel reveal delay-1">
+                        <h3>Backend</h3>
+                        <p>Node.js • Python • REST APIs • GraphQL</p>
+                    </div>
+                    <div class="tech-card glass-panel reveal delay-2">
+                        <h3>Intelligence</h3>
+                        <p>Machine Learning • LLMs • Data Pipelines</p>
+                    </div>
+                    <div class="tech-card glass-panel reveal delay-3">
+                        <h3>Infrastructure</h3>
+                        <p>AWS • Docker • CI/CD • Git</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="section bg-alt" id="pricing">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Transparent Packages</h2>
+                    <p>Scalable solutions for businesses of all sizes. (Demo Pricing)</p>
+                </div>
+                
+                <div class="pricing-toggle reveal">
+                    <span id="monthly-label" class="active">Monthly</span>
+                    <label class="switch">
+                        <input type="checkbox" id="billing-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span id="yearly-label">Yearly (Save 20%)</span>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Starter -->
+                    <div class="pricing-card glass-panel reveal">
+                        <h3>STARTER</h3>
+                        <p class="price" data-monthly="$2,500" data-yearly="$2,000"><span>$2,500</span>/mo</p>
+                        <p class="desc">For small businesses needing a modern presence.</p>
+                        <ul class="features-list">
+                            <li>Responsive Website</li>
+                            <li>Basic CMS Integration</li>
+                            <li>Standard UI/UX Design</li>
+                            <li>Contact Forms</li>
+                        </ul>
+                        <button class="btn btn-secondary full-width">Contact for Pricing</button>
+                    </div>
+                    <!-- Growth -->
+                    <div class="pricing-card glass-panel featured reveal delay-1">
+                        <div class="badge">Most Popular</div>
+                        <h3>GROWTH</h3>
+                        <p class="price" data-monthly="$6,000" data-yearly="$4,800"><span>$6,000</span>/mo</p>
+                        <p class="desc">For scaling businesses needing automation.</p>
+                        <ul class="features-list">
+                            <li>Custom Web Application</li>
+                            <li>Advanced Integrations (CRM/ERP)</li>
+                            <li>Workflow Automation</li>
+                            <li>Premium UI/UX System</li>
+                            <li>Analytics Dashboard</li>
+                        </ul>
+                        <button class="btn btn-primary full-width">Start Growth Plan</button>
+                    </div>
+                    <!-- Scale -->
+                    <div class="pricing-card glass-panel reveal delay-2">
+                        <h3>SCALE</h3>
+                        <p class="price" data-monthly="Custom" data-yearly="Custom"><span>Custom</span></p>
+                        <p class="desc">For enterprises needing AI and vast data solutions.</p>
+                        <ul class="features-list">
+                            <li>AI / ML Integration</li>
+                            <li>Complex Data Pipelines</li>
+                            <li>Cloud Infrastructure Setup</li>
+                            <li>Dedicated Support Team</li>
+                            <li>Legacy System Migration</li>
+                        </ul>
+                        <button class="btn btn-secondary full-width">Discuss Custom Setup</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section" id="testimonials">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Client Feedback</h2>
+                    <p>Demo testimonials for conceptual purposes.</p>
+                </div>
+                <div class="testimonial-carousel glass-panel reveal">
+                    <div class="testimonial active">
+                        <p class="quote">"NEXORA transformed our legacy systems into a sleek, automated platform. Our operational efficiency increased by 40% in just three months."</p>
+                        <div class="author">
+                            <h4>Arin Mehta</h4>
+                            <p>CTO, FinFlow (Fictional)</p>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <p class="quote">"Their understanding of modern UX and AI integration is unmatched. The healthcare dashboard they built is intuitive and secure."</p>
+                        <div class="author">
+                            <h4>Maya Sen</h4>
+                            <p>Director, HealthSync (Fictional)</p>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <p class="quote">"A truly professional partner. They handled our digital transformation from strategy to deployment seamlessly."</p>
+                        <div class="author">
+                            <h4>Daniel Roy</h4>
+                            <p>CEO, LogiTech Solutions (Fictional)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-controls">
+                        <button id="prev-test" aria-label="Previous Testimonial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+                        <button id="next-test" aria-label="Next Testimonial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section bg-alt" id="faq">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-accordion">
+                    <div class="faq-item reveal">
+                        <button class="faq-question" aria-expanded="false">How does the development process work? <span class="icon">+</span></button>
+                        <div class="faq-answer"><p>We follow a 6-step framework: Discover, Strategize, Design, Build, Launch, and Grow. You are involved at every milestone to ensure alignment with business goals.</p></div>
+                    </div>
+                    <div class="faq-item reveal delay-1">
+                        <button class="faq-question" aria-expanded="false">How long does a standard project take? <span class="icon">+</span></button>
+                        <div class="faq-answer"><p>A standard corporate website takes 4-6 weeks. Complex web applications or AI integrations typically range from 3 to 6 months depending on the scope.</p></div>
+                    </div>
+                    <div class="faq-item reveal delay-2">
+                        <button class="faq-question" aria-expanded="false">Can you redesign an existing legacy system? <span class="icon">+</span></button>
+                        <div class="faq-answer"><p>Yes, digital transformation is our specialty. We can modernize legacy architectures, improve UI/UX, and migrate data to modern cloud platforms safely.</p></div>
+                    </div>
+                    <div class="faq-item reveal delay-3">
+                        <button class="faq-question" aria-expanded="false">Do you provide ongoing maintenance? <span class="icon">+</span></button>
+                        <div class="faq-answer"><p>Absolutely. We offer tailored maintenance contracts covering security updates, performance monitoring, and feature iterations.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA & Contact Section -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info reveal">
+                        <h2>Have an idea?<br>Let's build it.</h2>
+                        <p>Contact NEXORA to discuss your next digital project, technical challenge, or business automation needs.</p>
+                        
+                        <div class="contact-methods mt-2">
+                            <p><strong>Email:</strong> hello@nexora-demo.com</p>
+                            <p><strong>HQ:</strong> San Francisco, CA (Fictional)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-wrapper glass-panel reveal delay-1">
+                        <form id="contact-form" class="form">
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" required placeholder="John Doe">
+                                </div>
+                                <div class="input-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" required placeholder="john@company.com">
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" placeholder="Your Organization">
+                            </div>
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label for="service">Interested Service</label>
+                                    <select id="service" required>
+                                        <option value="" disabled selected>Select a service</option>
+                                        <option value="web">Web Development</option>
+                                        <option value="uiux">UI/UX Design</option>
+                                        <option value="auto">Automation</option>
+                                        <option value="ai">AI Solutions</option>
+                                        <option value="data">Data Solutions</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label for="budget">Budget Range</label>
+                                    <select id="budget" required>
+                                        <option value="" disabled selected>Select range</option>
+                                        <option value="small">Under $1,000</option>
+                                        <option value="medium">$1,000 - $5,000</option>
+                                        <option value="large">$5,000 - $10,000</option>
+                                        <option value="enterprise">$10,000+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="message">Project Details</label>
+                                <textarea id="message" rows="4" required placeholder="Tell us about your goals..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary full-width">Send Message</button>
+                            <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand-logo mb-1">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        <span>NEXORA</span>
+                    </div>
+                    <p>Build Smarter. Move Further.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#work">Work</a>
+                    <a href="#process">Process</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Solutions</h4>
+                    <a href="#">Web Development</a>
+                    <a href="#">AI Integration</a>
+                    <a href="#">Business Automation</a>
+                    <a href="#">Data Pipelines</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <a href="#faq">FAQ</a>
+                    <a href="#contact">Contact</a>
+                    <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NEXORA. Demo business concept created for GitHub portfolio.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+                    <a href="#" aria-label="X (Twitter)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global Modal Overlay -->
+    <div class="modal-overlay" id="global-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-container glass-panel">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-content" id="modal-content">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/services.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
