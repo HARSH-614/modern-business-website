@@ -1,0 +1,21 @@
+{
+  "name": "S. Baruah Foodyverse",
+  "short_name": "Foodyverse",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#101713",
+  "theme_color": "#1b382b",
+  "description": "Authentic Assamese & Pan-Indian Dining at Pabhoi Panchali, Biswanath",
+  "icons": [
+    {
+      "src": "assets/logo/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/logo/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
