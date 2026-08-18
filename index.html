@@ -1,499 +1,668 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXORA — Digital Technology & Business Solutions</title>
-    <meta name="description" content="NEXORA is a fictional digital technology company providing modern web development, AI solutions, and business automation. (Portfolio Project)">
-    
-    <!-- Open Graph Metadata -->
-    <meta property="og:title" content="NEXORA — Digital Technology & Business Solutions">
-    <meta property="og:description" content="Modern web development, AI solutions, and business automation.">
-    <meta property="og:type" content="website">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>S. BARUAH FOODYVERSE | Authentic Assamese & Pan-Indian Dining | Biswanath, Assam</title>
+  <meta name="description" content="Discover authentic Assamese flavours, regional Indian favourites, and serene garden dining at S. Baruah Foodyverse, Pabhoi Panchali, Biswanath, Assam.">
+  <meta name="keywords" content="Restaurant in Biswanath Chariali, Assamese Restaurant Biswanath, Pabhoi Panchali, Masor Tenga, Gahori Mankho, Garden Dining Assam">
+  <meta name="author" content="Sajal Baruah">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="S. BARUAH FOODYVERSE | A Taste of Assam. A Journey Across India.">
+  <meta property="og:description" content="Authentic Assamese heritage cuisine & Pan-Indian culinary specialties in a peaceful nature-rich atmosphere.">
+  <meta property="og:type" content="restaurant.restaurant">
+  <meta property="og:url" content="https://sbaruahfoodyverse.com">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
+  <!-- PWA & Favicon -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1b382b">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Noto+Serif+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Structured Schema Data (LocalBusiness / Restaurant) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "S. BARUAH FOODYVERSE",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+    "founder": {
+      "@type": "Person",
+      "name": "Sajal Baruah",
+      "jobTitle": "Founder & Owner"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Pabhoi Panchali",
+      "addressLocality": "Biswanath",
+      "addressRegion": "Assam",
+      "postalCode": "784174",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 26.815454,
+      "longitude": 93.146444
+    },
+    "telephone": "+916001950614",
+    "servesCuisine": ["Assamese", "North-East Indian", "Pan-Indian", "Comfort Food"],
+    "priceRange": "₹₹",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "10:00",
+      "closes": "22:00"
+    }
+  }
+  </script>
 </head>
 <body>
 
-    <!-- Background Canvas -->
-    <canvas id="network-canvas" aria-hidden="true"></canvas>
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <span>🌿 Welcome to S. Baruah Foodyverse • Pabhoi Panchali, Biswanath</span>
+    <a href="#reservations" data-i18n="hero.reserveTable">Reserve a Table</a>
+  </div>
 
-    <!-- Navigation -->
-    <header class="navbar" id="navbar">
-        <div class="nav-container container">
-            <a href="#" class="brand-logo" aria-label="NEXORA Home">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                <span>NEXORA</span>
-            </a>
-
-            <nav class="nav-menu" id="nav-menu">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#work" class="nav-link">Work</a>
-                <a href="#process" class="nav-link">Process</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </nav>
-
-            <div class="nav-actions">
-                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
-                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-                </button>
-                <button id="mobile-toggle" class="mobile-toggle" aria-label="Open Menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <a href="#home" class="brand-logo">
+        <div class="brand-emblem">SB</div>
+        <div class="brand-text-block">
+          <span class="brand-name">S. BARUAH FOODYVERSE</span>
+          <span class="brand-location">Pabhoi Panchali • Biswanath</span>
         </div>
-    </header>
+      </a>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero" id="hero">
-            <div class="container hero-content">
-                <div class="status-badge fade-in-up">
-                    <span class="status-dot"></span>
-                    <span>DIGITAL INNOVATION PARTNER</span>
-                </div>
-                <h1 class="hero-title fade-in-up delay-1">BUILD SMARTER.<br><span class="gradient-text">MOVE FURTHER.</span></h1>
-                <p class="hero-subtitle fade-in-up delay-2">We help visionary organizations transform complex ideas into modern digital products, scalable architectures, and intelligent solutions.</p>
-                <div class="hero-actions fade-in-up delay-3">
-                    <a href="#contact" class="btn btn-primary">Start a Project</a>
-                    <a href="#services" class="btn btn-secondary">Explore Solutions</a>
-                </div>
-            </div>
-        </section>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+        <li><a href="#signature-assam" class="nav-link" data-i18n="nav.signature">Assam Heritage</a></li>
+        <li><a href="#menu" class="nav-link" data-i18n="nav.menu">Menu Explorer</a></li>
+        <li><a href="#garden" class="nav-link" data-i18n="nav.garden">Garden Ambience</a></li>
+        <li><a href="#reservations" class="nav-link" data-i18n="nav.reservations">Reservations</a></li>
+        <li><a href="#offers" class="nav-link" data-i18n="nav.offers">Offers</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Location</a></li>
+      </ul>
 
-        <!-- Trust Bar -->
-        <div class="trust-bar fade-in-up delay-4">
-            <div class="container trust-container">
-                <span class="trust-label">INDUSTRIES SERVED (DEMO)</span>
-                <div class="trust-logos">
-                    <span>FINTECH</span>
-                    <span class="divider">•</span>
-                    <span>HEALTHCARE</span>
-                    <span class="divider">•</span>
-                    <span>EDUCATION</span>
-                    <span class="divider">•</span>
-                    <span>RETAIL</span>
-                    <span class="divider">•</span>
-                    <span>LOGISTICS</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- About Section -->
-        <section class="section" id="about">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2>Why NEXORA?</h2>
-                    <p>Modern technology designed around real business objectives.</p>
-                </div>
-                <div class="value-grid">
-                    <div class="value-card glass-panel reveal">
-                        <div class="icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-                        <h3>Innovation</h3>
-                        <p>Modern technology designed around real business needs, not just trends.</p>
-                    </div>
-                    <div class="value-card glass-panel reveal delay-1">
-                        <div class="icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-                        <h3>Scalability</h3>
-                        <p>Architectures built to grow effortlessly with your organization.</p>
-                    </div>
-                    <div class="value-card glass-panel reveal delay-2">
-                        <div class="icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
-                        <h3>Intelligence</h3>
-                        <p>Data and automation workflows used to improve business decisions.</p>
-                    </div>
-                    <div class="value-card glass-panel reveal delay-3">
-                        <div class="icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-                        <h3>Reliability</h3>
-                        <p>Performance, security, and maintainability considered from day one.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="section bg-alt" id="services">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2>Our Services</h2>
-                    <p>Comprehensive digital solutions for the modern enterprise.</p>
-                </div>
-                <div class="services-grid" id="services-grid">
-                    <!-- Populated by JS -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Statistics Section -->
-        <section class="section section-stats" id="stats">
-            <div class="container">
-                <p class="demo-label reveal">DEMO COMPANY METRICS</p>
-                <div class="stats-grid">
-                    <div class="stat-item reveal">
-                        <h3 class="counter" data-target="50">0</h3><span class="plus">+</span>
-                        <p>DIGITAL PROJECTS</p>
-                    </div>
-                    <div class="stat-item reveal delay-1">
-                        <h3 class="counter" data-target="12">0</h3><span class="plus">+</span>
-                        <p>INDUSTRIES</p>
-                    </div>
-                    <div class="stat-item reveal delay-2">
-                        <h3 class="counter" data-target="98">0</h3><span class="plus">%</span>
-                        <p>CLIENT SATISFACTION</p>
-                    </div>
-                    <div class="stat-item reveal delay-3">
-                        <h3>24/7</h3>
-                        <p>DIGITAL AVAILABILITY</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Work Section -->
-        <section class="section" id="work">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2>Featured Work</h2>
-                    <p>Case studies demonstrating our technical approach. (Fictional)</p>
-                </div>
-                <div class="projects-grid" id="projects-grid">
-                    <!-- Populated by JS -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Process Section -->
-        <section class="section bg-alt" id="process">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2>Our Process</h2>
-                    <p>A systematic approach to digital transformation.</p>
-                </div>
-                <div class="process-timeline">
-                    <div class="process-step reveal">
-                        <div class="step-number">01</div>
-                        <h3>DISCOVER</h3>
-                        <p>Understand the business, users, and problem.</p>
-                    </div>
-                    <div class="process-step reveal delay-1">
-                        <div class="step-number">02</div>
-                        <h3>STRATEGIZE</h3>
-                        <p>Define the product and technical direction.</p>
-                    </div>
-                    <div class="process-step reveal delay-2">
-                        <div class="step-number">03</div>
-                        <h3>DESIGN</h3>
-                        <p>Create the user experience and visual system.</p>
-                    </div>
-                    <div class="process-step reveal delay-3">
-                        <div class="step-number">04</div>
-                        <h3>BUILD</h3>
-                        <p>Develop and integrate the scalable solution.</p>
-                    </div>
-                    <div class="process-step reveal delay-4">
-                        <div class="step-number">05</div>
-                        <h3>LAUNCH</h3>
-                        <p>Test, optimize, and deploy to production.</p>
-                    </div>
-                    <div class="process-step reveal delay-5">
-                        <div class="step-number">06</div>
-                        <h3>GROW</h3>
-                        <p>Iterate and improve based on real-world data.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technology Ecosystem -->
-        <section class="section" id="tech">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2>Technology Ecosystem</h2>
-                    <p>Modern stacks for modern problems.</p>
-                </div>
-                <div class="tech-grid">
-                    <div class="tech-card glass-panel reveal">
-                        <h3>Frontend</h3>
-                        <p>HTML5 • CSS3 • JavaScript • React • Vue</p>
-                    </div>
-                    <div class="tech-card glass-panel reveal delay-1">
-                        <h3>Backend</h3>
-                        <p>Node.js • Python • REST APIs • GraphQL</p>
-                    </div>
-                    <div class="tech-card glass-panel reveal delay-2">
-                        <h3>Intelligence</h3>
-                        <p>Machine Learning • LLMs • Data Pipelines</p>
-                    </div>
-                    <div class="tech-card glass-panel reveal delay-3">
-                        <h3>Infrastructure</h3>
-                        <p>AWS • Docker • CI/CD • Git</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Section -->
-        <section class="section bg-alt" id="pricing">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2>Transparent Packages</h2>
-                    <p>Scalable solutions for businesses of all sizes. (Demo Pricing)</p>
-                </div>
-                
-                <div class="pricing-toggle reveal">
-                    <span id="monthly-label" class="active">Monthly</span>
-                    <label class="switch">
-                        <input type="checkbox" id="billing-toggle">
-                        <span class="slider"></span>
-                    </label>
-                    <span id="yearly-label">Yearly (Save 20%)</span>
-                </div>
-
-                <div class="pricing-grid">
-                    <!-- Starter -->
-                    <div class="pricing-card glass-panel reveal">
-                        <h3>STARTER</h3>
-                        <p class="price" data-monthly="$2,500" data-yearly="$2,000"><span>$2,500</span>/mo</p>
-                        <p class="desc">For small businesses needing a modern presence.</p>
-                        <ul class="features-list">
-                            <li>Responsive Website</li>
-                            <li>Basic CMS Integration</li>
-                            <li>Standard UI/UX Design</li>
-                            <li>Contact Forms</li>
-                        </ul>
-                        <button class="btn btn-secondary full-width">Contact for Pricing</button>
-                    </div>
-                    <!-- Growth -->
-                    <div class="pricing-card glass-panel featured reveal delay-1">
-                        <div class="badge">Most Popular</div>
-                        <h3>GROWTH</h3>
-                        <p class="price" data-monthly="$6,000" data-yearly="$4,800"><span>$6,000</span>/mo</p>
-                        <p class="desc">For scaling businesses needing automation.</p>
-                        <ul class="features-list">
-                            <li>Custom Web Application</li>
-                            <li>Advanced Integrations (CRM/ERP)</li>
-                            <li>Workflow Automation</li>
-                            <li>Premium UI/UX System</li>
-                            <li>Analytics Dashboard</li>
-                        </ul>
-                        <button class="btn btn-primary full-width">Start Growth Plan</button>
-                    </div>
-                    <!-- Scale -->
-                    <div class="pricing-card glass-panel reveal delay-2">
-                        <h3>SCALE</h3>
-                        <p class="price" data-monthly="Custom" data-yearly="Custom"><span>Custom</span></p>
-                        <p class="desc">For enterprises needing AI and vast data solutions.</p>
-                        <ul class="features-list">
-                            <li>AI / ML Integration</li>
-                            <li>Complex Data Pipelines</li>
-                            <li>Cloud Infrastructure Setup</li>
-                            <li>Dedicated Support Team</li>
-                            <li>Legacy System Migration</li>
-                        </ul>
-                        <button class="btn btn-secondary full-width">Discuss Custom Setup</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials -->
-        <section class="section" id="testimonials">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2>Client Feedback</h2>
-                    <p>Demo testimonials for conceptual purposes.</p>
-                </div>
-                <div class="testimonial-carousel glass-panel reveal">
-                    <div class="testimonial active">
-                        <p class="quote">"NEXORA transformed our legacy systems into a sleek, automated platform. Our operational efficiency increased by 40% in just three months."</p>
-                        <div class="author">
-                            <h4>Arin Mehta</h4>
-                            <p>CTO, FinFlow (Fictional)</p>
-                        </div>
-                    </div>
-                    <div class="testimonial">
-                        <p class="quote">"Their understanding of modern UX and AI integration is unmatched. The healthcare dashboard they built is intuitive and secure."</p>
-                        <div class="author">
-                            <h4>Maya Sen</h4>
-                            <p>Director, HealthSync (Fictional)</p>
-                        </div>
-                    </div>
-                    <div class="testimonial">
-                        <p class="quote">"A truly professional partner. They handled our digital transformation from strategy to deployment seamlessly."</p>
-                        <div class="author">
-                            <h4>Daniel Roy</h4>
-                            <p>CEO, LogiTech Solutions (Fictional)</p>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-controls">
-                        <button id="prev-test" aria-label="Previous Testimonial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
-                        <button id="next-test" aria-label="Next Testimonial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="section bg-alt" id="faq">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2>Frequently Asked Questions</h2>
-                </div>
-                <div class="faq-accordion">
-                    <div class="faq-item reveal">
-                        <button class="faq-question" aria-expanded="false">How does the development process work? <span class="icon">+</span></button>
-                        <div class="faq-answer"><p>We follow a 6-step framework: Discover, Strategize, Design, Build, Launch, and Grow. You are involved at every milestone to ensure alignment with business goals.</p></div>
-                    </div>
-                    <div class="faq-item reveal delay-1">
-                        <button class="faq-question" aria-expanded="false">How long does a standard project take? <span class="icon">+</span></button>
-                        <div class="faq-answer"><p>A standard corporate website takes 4-6 weeks. Complex web applications or AI integrations typically range from 3 to 6 months depending on the scope.</p></div>
-                    </div>
-                    <div class="faq-item reveal delay-2">
-                        <button class="faq-question" aria-expanded="false">Can you redesign an existing legacy system? <span class="icon">+</span></button>
-                        <div class="faq-answer"><p>Yes, digital transformation is our specialty. We can modernize legacy architectures, improve UI/UX, and migrate data to modern cloud platforms safely.</p></div>
-                    </div>
-                    <div class="faq-item reveal delay-3">
-                        <button class="faq-question" aria-expanded="false">Do you provide ongoing maintenance? <span class="icon">+</span></button>
-                        <div class="faq-answer"><p>Absolutely. We offer tailored maintenance contracts covering security updates, performance monitoring, and feature iterations.</p></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA & Contact Section -->
-        <section class="section" id="contact">
-            <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-info reveal">
-                        <h2>Have an idea?<br>Let's build it.</h2>
-                        <p>Contact NEXORA to discuss your next digital project, technical challenge, or business automation needs.</p>
-                        
-                        <div class="contact-methods mt-2">
-                            <p><strong>Email:</strong> hello@nexora-demo.com</p>
-                            <p><strong>HQ:</strong> San Francisco, CA (Fictional)</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-form-wrapper glass-panel reveal delay-1">
-                        <form id="contact-form" class="form">
-                            <div class="form-row">
-                                <div class="input-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" required placeholder="John Doe">
-                                </div>
-                                <div class="input-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" required placeholder="john@company.com">
-                                </div>
-                            </div>
-                            <div class="input-group">
-                                <label for="company">Company</label>
-                                <input type="text" id="company" placeholder="Your Organization">
-                            </div>
-                            <div class="form-row">
-                                <div class="input-group">
-                                    <label for="service">Interested Service</label>
-                                    <select id="service" required>
-                                        <option value="" disabled selected>Select a service</option>
-                                        <option value="web">Web Development</option>
-                                        <option value="uiux">UI/UX Design</option>
-                                        <option value="auto">Automation</option>
-                                        <option value="ai">AI Solutions</option>
-                                        <option value="data">Data Solutions</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                                <div class="input-group">
-                                    <label for="budget">Budget Range</label>
-                                    <select id="budget" required>
-                                        <option value="" disabled selected>Select range</option>
-                                        <option value="small">Under $1,000</option>
-                                        <option value="medium">$1,000 - $5,000</option>
-                                        <option value="large">$5,000 - $10,000</option>
-                                        <option value="enterprise">$10,000+</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="input-group">
-                                <label for="message">Project Details</label>
-                                <textarea id="message" rows="4" required placeholder="Tell us about your goals..."></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary full-width">Send Message</button>
-                            <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="brand-logo mb-1">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                        <span>NEXORA</span>
-                    </div>
-                    <p>Build Smarter. Move Further.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Company</h4>
-                    <a href="#about">About</a>
-                    <a href="#services">Services</a>
-                    <a href="#work">Work</a>
-                    <a href="#process">Process</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Solutions</h4>
-                    <a href="#">Web Development</a>
-                    <a href="#">AI Integration</a>
-                    <a href="#">Business Automation</a>
-                    <a href="#">Data Pipelines</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Resources</h4>
-                    <a href="#faq">FAQ</a>
-                    <a href="#contact">Contact</a>
-                    <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NEXORA. Demo business concept created for GitHub portfolio.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-                    <a href="#" aria-label="X (Twitter)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Global Modal Overlay -->
-    <div class="modal-overlay" id="global-modal" aria-hidden="true" role="dialog" aria-modal="true">
-        <div class="modal-container glass-panel">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
-            <div class="modal-content" id="modal-content">
-                <!-- Content injected via JS -->
-            </div>
-        </div>
+      <div class="nav-actions">
+        <button id="langSwitchBtn" class="lang-switch" aria-label="Toggle language">অসমীয়া</button>
+        <button id="themeToggleBtn" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
+        <button id="cartTriggerBtn" class="cart-trigger-btn" aria-label="View food platter">
+          <span>Platter</span>
+          <span class="cart-badge cart-count-display">0</span>
+        </button>
+        <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Open menu">☰</button>
+      </div>
     </div>
+  </header>
 
-    <script src="js/services.js"></script>
-    <script src="js/projects.js"></script>
-    <script src="js/effects.js"></script>
-    <script src="js/main.js"></script>
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="hero-content reveal-on-scroll">
+        <div class="hero-tag" data-i18n="hero.tag">Authentic Dining at Biswanath, Assam</div>
+        <h1 class="hero-title" data-i18n="hero.headline">A TASTE OF ASSAM. A JOURNEY ACROSS INDIA.</h1>
+        <p class="hero-subtitle" data-i18n="hero.subhead">
+          Discover authentic Assamese flavours, regional Indian favourites, and a peaceful dining experience surrounded by greenery at Pabhoi Panchali, Biswanath.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#menu" class="btn btn-primary" data-i18n="hero.exploreMenu">Explore Menu</a>
+          <a href="#reservations" class="btn btn-outline-light" data-i18n="hero.reserveTable">Reserve a Table</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag" data-i18n="about.subtitle">About S. Baruah Foodyverse</span>
+        <h2 class="section-title" data-i18n="about.title">Rooted in Assam. Inspired by India.</h2>
+        <p class="section-description" data-i18n="about.p1">
+          S. Baruah Foodyverse is designed around a singular vision: celebrating the rich, organic culinary roots of Assam while weaving a grand tapestry of iconic regional dishes from across India.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card reveal-on-scroll">
+          <div class="feature-card-icon">🐟</div>
+          <h3 class="feature-card-title">Authentic Assamese Cuisine</h3>
+          <p class="feature-card-desc">Honoring timeless recipes including Ou Tenga Masor Tenga, Khorisa Gahori, Koldil preparations, and aromatic Joha rice.</p>
+        </div>
+        <div class="feature-card reveal-on-scroll">
+          <div class="feature-card-icon">🍛</div>
+          <h3 class="feature-card-title">Pan-India Exploration</h3>
+          <p class="feature-card-desc">Curated specialties from Old Delhi charcoal-smoked delicacies to fragrant coastal curries and royal Hyderabadi Dum Biryani.</p>
+        </div>
+        <div class="feature-card reveal-on-scroll">
+          <div class="feature-card-icon">🌿</div>
+          <h3 class="feature-card-title">Serene Garden Ambience</h3>
+          <p class="feature-card-desc">Peaceful open-air dining under lush greenery at Pabhoi Panchali, crafted for family meals, couples, and student groups.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signature Assam Heritage Section -->
+  <section id="signature-assam" class="section" style="background-color: var(--color-surface-elevated);">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag" data-i18n="signature.tag">Cultural Roots</span>
+        <h2 class="section-title" data-i18n="signature.title">THE FLAVOURS OF ASSAM</h2>
+        <p class="section-description" data-i18n="signature.subtitle">
+          Authentic recipes highlighting seasonal river fish, organic greens, and traditional aromatic spices.
+        </p>
+      </div>
+
+      <div class="food-grid">
+        <article class="food-card reveal-on-scroll">
+          <div class="food-card-media">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Ou Tenga Masor Tenga" loading="lazy">
+            <span class="food-badge-diet non-veg">Non-Veg</span>
+            <span class="food-badge-special">Signature</span>
+          </div>
+          <div class="food-card-body">
+            <div class="food-meta"><span>Assam</span><span>Mild Sour</span></div>
+            <h3 class="food-title">Ou Tenga Di Masor Tenga</h3>
+            <div class="food-assamese-title">ঔ টেঙা দি মাছৰ টেঙা</div>
+            <p class="food-desc">Fresh river carp simmered in aromatic elephant apple sour gravy with fenugreek seeds and cold-pressed mustard oil.</p>
+            <div class="food-card-footer">
+              <span class="food-price">₹240</span>
+              <a href="#menu" class="btn-card-add">View in Menu</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card reveal-on-scroll">
+          <div class="food-card-media">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Khorisa Gahori Mankho" loading="lazy">
+            <span class="food-badge-diet non-veg">Non-Veg</span>
+            <span class="food-badge-special">Heritage</span>
+          </div>
+          <div class="food-card-body">
+            <div class="food-meta"><span>Assam</span><span>Fiery & Smoky</span></div>
+            <h3 class="food-title">Khorisa Di Gahori Mankho</h3>
+            <div class="food-assamese-title">খৰিচা দি গাহৰি মাংস</div>
+            <p class="food-desc">Slow-cooked local pork with natural fermented bamboo shoot (Khorisa), fresh garlic, and green chillies.</p>
+            <div class="food-card-footer">
+              <span class="food-price">₹280</span>
+              <a href="#menu" class="btn-card-add">View in Menu</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card reveal-on-scroll">
+          <div class="food-card-media">
+            <img src="https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80" alt="Assamese Thali Platter" loading="lazy">
+            <span class="food-badge-diet non-veg">Platter</span>
+            <span class="food-badge-special">Grand Thali</span>
+          </div>
+          <div class="food-card-body">
+            <div class="food-meta"><span>Assam</span><span>Complete Feast</span></div>
+            <h3 class="food-title">Assamese Kahi Thali</h3>
+            <div class="food-assamese-title">অসমীয়া কাঁহৰ কাঁহীৰ সাজ</div>
+            <p class="food-desc">Traditional bell-metal platter served with Joha rice, Khar, Dhekia Xaak, Mati Mahor Dal, and Pitika.</p>
+            <div class="food-card-footer">
+              <span class="food-price">₹320</span>
+              <a href="#menu" class="btn-card-add">View in Menu</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Menu Explorer Section -->
+  <section id="menu" class="section">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag" data-i18n="menu.subtitle">Curated Dishes</span>
+        <h2 class="section-title" data-i18n="menu.title">Interactive Menu Explorer</h2>
+        <p class="section-description">Filter by cuisine, dietary preferences, or search your favorite dish.</p>
+      </div>
+
+      <!-- Controls Block -->
+      <div class="menu-controls reveal-on-scroll">
+        <div class="search-input-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="menuSearchInput" class="search-input" placeholder="Search dishes, ingredients, states (e.g. Masor Tenga, Biryani, Bamboo Shoot)..." data-i18n-placeholder="menu.searchPlaceholder">
+        </div>
+
+        <div class="filter-pills-scroll" id="menuCategoriesPills">
+          <!-- Dynamic Category Pills Rendered via JavaScript -->
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; margin-top: 16px; gap: 16px; padding-top: 12px; border-top: 1px solid var(--color-border);">
+          <div style="display: flex; gap: 16px; font-size: 0.9rem;">
+            <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+              <input type="radio" name="dietFilter" value="all" checked> All
+            </label>
+            <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+              <input type="radio" name="dietFilter" value="veg"> Veg Only
+            </label>
+            <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+              <input type="radio" name="dietFilter" value="non-veg"> Non-Veg
+            </label>
+          </div>
+
+          <div>
+            <select id="menuSortSelect" class="form-control" style="padding: 6px 12px; font-size: 0.88rem;">
+              <option value="recommended">Sort: Recommended</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Food Grid -->
+      <div class="food-grid" id="menuItemsGrid">
+        <!-- Rendered Dynamically from data/menu.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Garden & Ambience Experience -->
+  <section id="garden" class="section" style="background: linear-gradient(135deg, rgba(14, 32, 23, 0.92), rgba(27, 56, 43, 0.9)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80') center/cover fixed; color: #fff;">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag" style="color: var(--color-accent);">Nature & Tranquility</span>
+        <h2 class="section-title" style="color: #fff;">DINE IN GREENERY</h2>
+        <p class="section-description" style="color: #e0e8e3;">Come for the food. Stay for the peace.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card reveal-on-scroll" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.15); color: #fff;">
+          <div class="feature-card-icon">🎋</div>
+          <h3 class="feature-card-title" style="color: #fff;">Open Garden Seating</h3>
+          <p class="feature-card-desc" style="color: #d1ded6;">Dine under open skies and natural bamboo installations surrounded by lush indigenous flora.</p>
+        </div>
+        <div class="feature-card reveal-on-scroll" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.15); color: #fff;">
+          <div class="feature-card-icon">👨‍👩‍👧‍👦</div>
+          <h3 class="feature-card-title" style="color: #fff;">Family & Group Friendly</h3>
+          <p class="feature-card-desc" style="color: #d1ded6;">Spacious layouts designed to comfortably accommodate family feasts, celebrations, and student gatherings.</p>
+        </div>
+        <div class="feature-card reveal-on-scroll" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.15); color: #fff;">
+          <div class="feature-card-icon">🕯️</div>
+          <h3 class="feature-card-title" style="color: #fff;">Warm Ambient Lighting</h3>
+          <p class="feature-card-desc" style="color: #d1ded6;">Evenings in Foodyverse are lit by soothing warm lights, perfect for quiet dates and calm dinner talks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Section -->
+  <section class="section">
+    <div class="container">
+      <div class="founder-box reveal-on-scroll">
+        <div class="founder-portrait-placeholder">
+          <div style="font-size: 3rem;">🌿</div>
+          <h3 style="color: #fff; margin-top: 12px;">Sajal Baruah</h3>
+          <p style="font-size: 0.85rem; color: var(--color-accent);">Founder & Owner</p>
+        </div>
+        <div>
+          <span class="section-tag">MEET THE FOUNDER</span>
+          <h2 style="font-size: 2rem; margin-bottom: 16px;">Sajal Baruah</h2>
+          <p class="founder-quote">
+            “Built from a love for food, Assam and the simple joy of bringing people together around a table.”
+          </p>
+          <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">
+            S. Baruah Foodyverse at Pabhoi Panchali represents a dedicated vision to serve authentic regional dishes with honest pricing, hygienic practices, and respectful hospitality for our Biswanath community.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation Section -->
+  <section id="reservations" class="section" style="background-color: var(--color-surface-elevated);">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag" data-i18n="reservation.tag">Plan Your Visit</span>
+        <h2 class="section-title" data-i18n="reservation.title">RESERVE YOUR TABLE</h2>
+        <p class="section-description" data-i18n="reservation.subtitle">Pre-book your indoor or garden table at Pabhoi Panchali for a relaxed dining experience.</p>
+      </div>
+
+      <div style="max-width: 760px; margin: 0 auto; background: var(--color-surface); padding: 40px; border-radius: var(--radius-md); border: 1px solid var(--color-border); box-shadow: var(--shadow-md);">
+        <form id="reservationForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="resName" data-i18n="reservation.name">Full Name *</label>
+              <input type="text" id="resName" class="form-control" placeholder="e.g. Sajal Baruah" required>
+            </div>
+            <div class="form-group">
+              <label for="resPhone" data-i18n="reservation.phone">Phone Number *</label>
+              <input type="tel" id="resPhone" class="form-control" placeholder="e.g. +91 60019 50614" required>
+            </div>
+            <div class="form-group">
+              <label for="resEmail" data-i18n="reservation.email">Email Address</label>
+              <input type="email" id="resEmail" class="form-control" placeholder="sajalbaruah65@gmail.com">
+            </div>
+            <div class="form-group">
+              <label for="resGuests" data-i18n="reservation.guests">Number of Guests *</label>
+              <select id="resGuests" class="form-control" required>
+                <option value="2">2 Guests (Couple Table)</option>
+                <option value="4" selected>4 Guests (Family Table)</option>
+                <option value="6">6 Guests</option>
+                <option value="8">8 Guests (Group Table)</option>
+                <option value="15">10-15 Guests (Large Gathering)</option>
+                <option value="25">Up to 25 Guests (Full Venue Inquiry)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="resDate" data-i18n="reservation.date">Date *</label>
+              <input type="date" id="resDate" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="resTime" data-i18n="reservation.time">Preferred Time (10 AM – 10 PM) *</label>
+              <input type="time" id="resTime" class="form-control" value="13:00" min="10:00" max="22:00" required>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 24px;">
+            <label for="resSeating" data-i18n="reservation.seating">Seating Preference</label>
+            <select id="resSeating" class="form-control">
+              <option value="Garden Outdoor">Peaceful Garden (Outdoor)</option>
+              <option value="Indoor AC">Indoor Dining Hall</option>
+              <option value="Family Area">Family Corner</option>
+            </select>
+          </div>
+
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 20px;" data-i18n="reservation.note">
+            Note: Total simultaneous restaurant capacity is 25–28 guests. We will confirm via phone/WhatsApp.
+          </p>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="reservation.submitBtn">Request Table Booking</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Checkout Section -->
+  <section id="checkout" class="section">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">Order Processing</span>
+        <h2 class="section-title" data-i18n="checkout.title">Finalize Your Order</h2>
+        <p class="section-description">Fast, direct ordering for Dine-in, Self-Pickup, or Local Delivery.</p>
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto; background: var(--color-surface); padding: 40px; border-radius: var(--radius-md); border: 1px solid var(--color-border); box-shadow: var(--shadow-md);">
+        <form id="checkoutForm">
+          <h3 style="font-size: 1.2rem; margin-bottom: 16px; color: var(--color-primary);" data-i18n="checkout.customerInfo">Customer Details</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="custName">Your Name *</label>
+              <input type="text" id="custName" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+              <label for="custPhone">Phone Number *</label>
+              <input type="tel" id="custPhone" class="form-control" placeholder="e.g. +91 60019 50614" required>
+            </div>
+          </div>
+
+          <!-- Dynamic Field for Dine-In Table -->
+          <div id="dineInTableBlock" class="form-group" style="display: none; margin-bottom: 20px;">
+            <label for="dineInTableNo" data-i18n="checkout.tableNumber">Table Number</label>
+            <input type="text" id="dineInTableNo" class="form-control" placeholder="e.g. Table 4 / Garden 2">
+          </div>
+
+          <!-- Dynamic Field for Delivery Address -->
+          <div id="deliveryAddressBlock" style="margin-bottom: 20px;">
+            <h3 style="font-size: 1.2rem; margin-bottom: 16px; color: var(--color-primary);" data-i18n="checkout.addressInfo">Delivery Destination (Biswanath Area)</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="delAddress" data-i18n="checkout.address">Street Address / Landmark *</label>
+                <input type="text" id="delAddress" class="form-control" placeholder="House / Shop near landmark">
+              </div>
+              <div class="form-group">
+                <label for="delVillage" data-i18n="checkout.village">Locality / Village / Area *</label>
+                <input type="text" id="delVillage" class="form-control" placeholder="e.g. Pabhoi Panchali / Biswanath">
+              </div>
+              <div class="form-group">
+                <label for="delPin" data-i18n="checkout.pin">PIN Code</label>
+                <input type="text" id="delPin" class="form-control" value="784174" readonly>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-size: 1.2rem; margin-bottom: 16px; color: var(--color-primary);" data-i18n="checkout.paymentMethod">Payment Method</h3>
+          <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px;">
+            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 12px; border: 1px solid var(--color-border); border-radius: var(--radius-sm);">
+              <input type="radio" name="paymentMethod" value="Cash" checked>
+              <span><strong>Cash on Delivery / Counter Bill</strong> (Pay at restaurant or upon food arrival)</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 12px; border: 1px solid var(--color-border); border-radius: var(--radius-sm);">
+              <input type="radio" name="paymentMethod" value="UPI">
+              <span><strong>UPI Payment on Arrival</strong> (GPay / PhonePe / Paytm scanner on delivery)</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 16px;" data-i18n="checkout.placeOrder">
+            Confirm Order Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offers Section -->
+  <section id="offers" class="section" style="background-color: var(--color-surface-elevated);">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">Value & Hospitality</span>
+        <h2 class="section-title">Special Packages & Offers</h2>
+        <p class="section-description">Sample promotional programs planned for students, families, and festive occasions.</p>
+      </div>
+      <div class="feature-grid" id="offersGrid"></div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="section">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">Celebrate with Us</span>
+        <h2 class="section-title">Host Your Events</h2>
+        <p class="section-description">Private dining, birthdays, and community gatherings amidst our tranquil garden.</p>
+      </div>
+      <div class="feature-grid" id="eventsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="section" style="background-color: var(--color-surface-elevated);">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">Visual Moments</span>
+        <h2 class="section-title">Food & Ambience Gallery</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <!-- Location & Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">Find Us</span>
+        <h2 class="section-title">Location & Contact</h2>
+        <p class="section-description">Visit us at Pabhoi Panchali in Biswanath, Assam.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 36px; align-items: center;">
+        <div class="feature-card reveal-on-scroll">
+          <h3 style="font-size: 1.4rem; margin-bottom: 16px; color: var(--color-primary);">S. BARUAH FOODYVERSE</h3>
+          <p style="margin-bottom: 12px; line-height: 1.6;">
+            <strong>📍 Address:</strong><br>
+            Pabhoi Panchali, PIN — 784174<br>
+            District — Biswanath, Assam, India
+          </p>
+          <p style="margin-bottom: 8px;"><strong>📞 Phone:</strong> <a href="tel:+916001950614">+91 60019 50614</a></p>
+          <p style="margin-bottom: 8px;"><strong>💬 WhatsApp:</strong> <a href="https://wa.me/919678092519" target="_blank" rel="noopener">+91 96780 92519</a></p>
+          <p style="margin-bottom: 16px;"><strong>✉️ Email:</strong> <a href="mailto:sajalbaruah65@gmail.com">sajalbaruah65@gmail.com</a></p>
+          <p style="margin-bottom: 24px;"><strong>⏰ Hours:</strong> 10:00 AM – 10:00 PM (Mon – Sun)</p>
+
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=26.815454,93.146444" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 10px 18px; font-size: 0.9rem;">Get Directions</a>
+            <a href="https://wa.me/919678092519" target="_blank" rel="noopener" class="btn btn-outline-primary" style="padding: 10px 18px; font-size: 0.9rem;">WhatsApp Chat</a>
+          </div>
+        </div>
+
+        <div class="reveal-on-scroll" style="height: 380px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);">
+          <iframe 
+            src="https://www.google.com/maps?q=26.815454,93.146444&hl=en&z=15&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <div class="brand-emblem">SB</div>
+            <span class="brand-name" style="color: #fff;">S. BARUAH FOODYVERSE</span>
+          </div>
+          <p style="font-size: 0.9rem; line-height: 1.6; color: #b8c7bf;" data-i18n="footer.aboutBrand">
+            A modern culinary establishment celebrating authentic Assamese cuisine and pan-Indian culinary heritage in a serene, nature-friendly garden ambience.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title" data-i18n="footer.quickLinks">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About Our Vision</a></li>
+            <li><a href="#signature-assam">Assamese Heritage</a></li>
+            <li><a href="#menu">Interactive Menu</a></li>
+            <li><a href="#reservations">Reserve a Table</a></li>
+            <li><a href="#contact">Location & Map</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title" data-i18n="footer.legalLinks">Policies & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="legal/privacy.html">Privacy Policy</a></li>
+            <li><a href="legal/terms.html">Terms & Conditions</a></li>
+            <li><a href="legal/refund.html">Refund & Cancellation</a></li>
+            <li><a href="legal/delivery.html">Delivery Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title" data-i18n="footer.contact">Contact Us</h4>
+          <p style="font-size: 0.88rem; line-height: 1.6; color: #b8c7bf;">
+            Pabhoi Panchali, PIN 784174<br>
+            Biswanath, Assam, India<br>
+            Phone: +91 60019 50614<br>
+            Email: sajalbaruah65@gmail.com
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 S. BARUAH FOODYVERSE. All rights reserved. Founder: Sajal Baruah.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Food Detail Modal -->
+  <div class="modal-overlay" id="foodDetailModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeFoodModalBtn">&times;</button>
+      <div id="foodModalBody"></div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer Modal -->
+  <div class="modal-overlay" id="cartDrawerModal">
+    <div class="modal-card" style="max-width: 500px;">
+      <button class="modal-close-btn" id="closeCartDrawerBtn">&times;</button>
+      <h3 style="font-size: 1.4rem; margin-bottom: 16px; color: var(--color-primary);" data-i18n="cart.title">Your Order Platter</h3>
+      
+      <!-- Order Type Selector -->
+      <div style="display: flex; gap: 8px; margin-bottom: 20px;">
+        <button class="filter-pill order-type-btn active" data-type="delivery">Delivery (10km)</button>
+        <button class="filter-pill order-type-btn" data-type="dine-in">Dine-In</button>
+        <button class="filter-pill order-type-btn" data-type="takeaway">Takeaway</button>
+      </div>
+
+      <div id="cartDrawerItems" style="max-height: 280px; overflow-y: auto; margin-bottom: 20px;"></div>
+
+      <div style="background: var(--color-surface-elevated); padding: 16px; border-radius: var(--radius-sm); font-size: 0.92rem; display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px;">
+        <div style="display: flex; justify-content: space-between;"><span>Subtotal:</span><strong id="cartSubtotalDisplay">₹0</strong></div>
+        <div style="display: flex; justify-content: space-between;"><span>Delivery Fee:</span><strong id="cartDeliveryFeeDisplay">₹0</strong></div>
+        <div style="display: flex; justify-content: space-between;"><span>GST (5%):</span><strong id="cartGstDisplay">₹0</strong></div>
+        <div style="display: flex; justify-content: space-between; font-size: 1.1rem; border-top: 1px solid var(--color-border); padding-top: 8px; color: var(--color-primary);">
+          <span>Grand Total:</span><strong id="cartGrandTotalDisplay">₹0</strong>
+        </div>
+      </div>
+
+      <button id="proceedToCheckoutBtn" class="btn btn-primary" style="width: 100%;" data-i18n="cart.checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- Reservation Confirmation Modal -->
+  <div class="modal-overlay" id="reservationConfirmModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeResConfirmBtn">&times;</button>
+      <div id="resConfirmSummary"></div>
+    </div>
+  </div>
+
+  <!-- Order Confirmation Modal -->
+  <div class="modal-overlay" id="orderConfirmModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeOrderConfirmBtn">&times;</button>
+      <div id="orderConfirmBody"></div>
+    </div>
+  </div>
+
+  <!-- Gallery Lightbox Modal -->
+  <div class="modal-overlay" id="galleryLightboxModal">
+    <div class="modal-card" style="max-width: 800px; padding: 16px;">
+      <button class="modal-close-btn" id="closeLightboxBtn">&times;</button>
+      <img id="lightboxImage" src="" alt="Gallery Preview" style="width: 100%; height: 450px; object-fit: cover; border-radius: var(--radius-sm);">
+      <p id="lightboxCaption" style="margin-top: 12px; font-weight: 600; text-align: center; color: var(--color-text-main);"></p>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Mobile Bottom Sticky Bar -->
+  <nav class="mobile-bottom-bar" aria-label="Mobile Bottom Navigation">
+    <a href="#menu"><span>🍽️</span><span>Menu</span></a>
+    <a href="#reservations"><span>📅</span><span>Book</span></a>
+    <button id="mobileCartBtn" onclick="document.getElementById('cartDrawerModal').classList.add('is-active')">
+      <span>🍲</span><span>Platter (<span class="cart-count-display">0</span>)</span>
+    </button>
+    <a href="https://wa.me/919678092519" target="_blank" rel="noopener"><span>💬</span><span>WhatsApp</span></a>
+  </nav>
+
+  <!-- Scripts -->
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
